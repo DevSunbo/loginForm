@@ -1,0 +1,33 @@
+{
+  "name": "loginform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevSunbo/loginForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevSunbo/loginForm/issues"
+  },
+  "homepage": "https://github.com/DevSunbo/loginForm#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.3",
+    "mongoose": "^5.9.4",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1"
+  }
+}
