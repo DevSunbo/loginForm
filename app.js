@@ -4,9 +4,14 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import passport from "passport";
+import routes from "./routes";
 import mongoose from "mongoose";
 import session from "express-session";
 import MongoStore from "connect-mongo";
+import globalRouter from "./routers/globalRouter";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const app = express();
 
@@ -17,6 +22,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan("dev"));
+// app.use(express.session);
 app.use(
     session({
         secret: process.env.COOKIE_SECRET,
@@ -32,5 +38,6 @@ app.use(
 // passport가 스스로 쿠키를 들여다봐서 쿠키 정보에 해당하는 사용자를 찾아줌
 app.use(passport.initialize()); 
 app.use(passport.session());
+
 
 export default app;
