@@ -21,8 +21,8 @@ const CookieStore = MongoStore(session);
 const connect = mongoose.connect(
     process.env.MONGO_URL,
     {
-        useNewUrlParser: true,
-        useFindAndModify: true
+        useNewUrlParser: true, useUnifiedTopology: true,
+        useCreateIndex: true, useFindAndModify: false
     }
 ).then(()=> console.log("connect to db"))
 .catch(err => console.log(err));
