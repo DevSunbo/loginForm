@@ -14,6 +14,9 @@ import { localsMiddleware } from "./middlewares";
 
 dotenv.config();
 
+import "./passport";
+
+
 const app = express();
 
 const CookieStore = MongoStore(session);
@@ -48,6 +51,7 @@ app.use(
 // passport가 스스로 쿠키를 들여다봐서 쿠키 정보에 해당하는 사용자를 찾아줌
 app.use(passport.initialize()); 
 app.use(passport.session());
+
 
 // app.use(localsMiddleware)
 
