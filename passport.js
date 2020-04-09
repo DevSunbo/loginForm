@@ -1,5 +1,5 @@
 import passport from "passport";
-import User from "./models/User";
+import User from "./model/User"
 import routes from "./routes";
 
 passport.use(User.createStrategy());
