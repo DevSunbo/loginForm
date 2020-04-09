@@ -3,6 +3,8 @@ import dotenv from "dotenv"
 
 dotenv.config();
 
+import "./model/User"
+
 const PORT = process.env.PORT;
 
 const handleListening = () => {
